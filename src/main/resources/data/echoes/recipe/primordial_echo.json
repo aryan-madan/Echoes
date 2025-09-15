@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "echoes",
+  "category": "equipment",
+  "key": {
+    "G": "echoes:echoic_pearl",
+    "S": "minecraft:diamond_sword"
+  },
+  "pattern": [
+    "GGG",
+    "GSG",
+    "GGG"
+  ],
+  "result": {
+    "count": 1,
+    "id": "echoes:primordial_echo"
+  }
+}
