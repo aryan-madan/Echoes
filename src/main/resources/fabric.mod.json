@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "echoes",
+  "version": "${version}",
+  "name": "Echoes of the End",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/echoes/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "aryan.echoes.client.EchoesClient"
+    ],
+    "main": [
+      "aryan.echoes.Echoes"
+    ]
+  },
+  "mixins": [
+    "echoes.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
