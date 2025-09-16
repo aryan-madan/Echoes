@@ -6,7 +6,6 @@ import net.minecraft.item.*;
 import net.minecraft.item.AxeItem;
 import net.minecraft.item.HoeItem;
 import net.minecraft.item.ShovelItem;
-import net.minecraft.recipe.Ingredient;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
@@ -15,6 +14,17 @@ import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.projectile.thrown.EnderPearlEntity;
+import net.minecraft.item.EnderPearlItem;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvents;
+import net.minecraft.stat.Stats;
+import net.minecraft.util.Hand;
+import net.minecraft.util.ActionResult;
+import net.minecraft.world.World;
 
 import java.util.function.Function;
 
@@ -70,20 +80,28 @@ public class ModItems {
     public static final ToolMaterial ECHO_MATERIAL = new ToolMaterial(
             BlockTags.INCORRECT_FOR_DIAMOND_TOOL,
             1927,
-            9.0F,
+            5.0F,
             3.5F,
             15,
             REPAIRS_ECHO
     );
 
-    public static final Item ECHOIC_PEARL = register("echoic_pearl",
-            Item::new,
-            new Item.Settings().rarity(Rarity.UNCOMMON));
+    public static class EchoicPearlItem extends EnderPearlItem {
+        public EchoicPearlItem(Item.Settings settings) {
+            super(settings);
+        }
+    }
+
+    public static final Item ECHOIC_PEARL = register(
+            "echoic_pearl",
+            EchoicPearlItem::new,
+            new Item.Settings().rarity(Rarity.UNCOMMON)
+    );
 
     public static final Item PRIMORDIAL_ECHO = register(
             "primordial_echo",
             Item::new,
-            new Item.Settings().rarity(Rarity.EPIC).sword(ECHO_MATERIAL, 4.5f, -2.2f)
+            new Item.Settings().rarity(Rarity.EPIC).sword(ECHO_MATERIAL, 2.5f, -2.8f)
     );
 
     public static void initialize() {
@@ -107,3 +125,4 @@ public class ModItems {
 
     }
 }
+
