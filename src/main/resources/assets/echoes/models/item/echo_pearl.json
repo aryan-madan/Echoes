@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "echoes:item/echoic_pearl"
+    "layer0": "echoes:item/echo_pearl"
   }
 }

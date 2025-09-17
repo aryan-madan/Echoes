@@ -1,18 +1,11 @@
 {
-  "type": "minecraft:crafting_shaped",
+  "type": "minecraft:smithing_transform",
   "group": "echoes",
-  "category": "equipment",
-  "key": {
-    "G": "echoes:echoic_pearl",
-    "S": "minecraft:diamond_sword"
-  },
-  "pattern": [
-    "GGG",
-    "GSG",
-    "GGG"
-  ],
+  "base": "minecraft:diamond_sword",
+  "addition": "minecraft:diamond",
+  "template": "echoes:primordial_upgrade_smithing_template",
   "result": {
-    "count": 1,
-    "id": "echoes:primordial_echo"
+    "id": "echoes:primordial_echo",
+    "count": 1
   }
 }

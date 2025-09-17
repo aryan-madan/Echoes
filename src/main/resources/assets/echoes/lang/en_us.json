@@ -4,7 +4,10 @@
   "item.echoes.chorus_axe": "Chorus Axe",
   "item.echoes.chorus_hoe": "Chorus Hoe",
   "item.echoes.chorus_shovel": "Chorus Shovel",
-  "item.echoes.echoic_pearl": "Echoic Pearl",
+  "item.echoes.echo_pearl": "Echo Pearl",
   "item.echoes.primordial_echo": "Primordial Echo",
-  "enchantment.echoes.sonic_burst": "Sonic Burst"
+  "item.echoes.primordial_upgrade_smithing_template": "Primordial Upgrade",
+  "enchantment.echoes.sonic_burst": "Sonic Burst",
+  "item.echoes.echo_stone": "Echo Stone",
+  "itemGroup.Echoes": "Echoes"
 }

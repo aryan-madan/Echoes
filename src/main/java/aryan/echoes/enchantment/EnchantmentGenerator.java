@@ -6,11 +6,12 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricDynamicRegistryProvider
 import net.minecraft.component.type.AttributeModifierSlot;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryWrapper;
-import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.enchantment.Enchantment;
 
 
 import java.util.concurrent.CompletableFuture;
+
+import static aryan.echoes.item.ModItems.PRIMORDIAL;
 
 public class EnchantmentGenerator extends FabricDynamicRegistryProvider {
     public EnchantmentGenerator(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
@@ -21,7 +22,7 @@ public class EnchantmentGenerator extends FabricDynamicRegistryProvider {
     protected void configure(RegistryWrapper.WrapperLookup registries, Entries entries) {
         register(entries, ModEnchantmentEffects.SONIC_BURST, Enchantment.builder(
                                 Enchantment.definition(
-                                        registries.getOrThrow(net.minecraft.registry.RegistryKeys.ITEM).getOrThrow(ItemTags.WEAPON_ENCHANTABLE),
+                                        registries.getOrThrow(net.minecraft.registry.RegistryKeys.ITEM).getOrThrow(PRIMORDIAL),
                                         10,
                                         3,
                                         Enchantment.leveledCost(1, 10),

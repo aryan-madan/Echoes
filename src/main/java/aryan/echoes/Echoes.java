@@ -1,8 +1,8 @@
 package aryan.echoes;
+import aryan.echoes.block.ModBlocks;
 import aryan.echoes.enchantment.ModEnchantmentEffects;
 import aryan.echoes.item.ModItems;
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -14,6 +14,7 @@ public class Echoes implements ModInitializer {
 	@Override
 	public void onInitialize() {
         ModItems.initialize();
+        ModBlocks.initialize();
         ModEnchantmentEffects.registerModEnchantmentEffects();
 	}
 
